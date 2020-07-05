@@ -6,7 +6,6 @@ import { TitleBar } from 'electron-react-titlebar';
 import injectSheet from 'react-jss';
 
 import InfoBar from '../ui/InfoBar';
-import { Component as DelayApp } from '../../features/delayApp';
 import { Component as BasicAuth } from '../../features/basicAuth';
 import { Component as ShareFranz } from '../../features/shareFranz';
 import ErrorBoundary from '../util/ErrorBoundary';
@@ -72,7 +71,6 @@ class AppLayout extends Component {
     areRequiredRequestsSuccessful: PropTypes.bool.isRequired,
     retryRequiredRequests: PropTypes.func.isRequired,
     areRequiredRequestsLoading: PropTypes.bool.isRequired,
-    isDelayAppScreenVisible: PropTypes.bool.isRequired,
     hasActivatedTrial: PropTypes.bool.isRequired,
   };
 
@@ -104,7 +102,6 @@ class AppLayout extends Component {
       areRequiredRequestsSuccessful,
       retryRequiredRequests,
       areRequiredRequestsLoading,
-      isDelayAppScreenVisible,
       hasActivatedTrial,
     } = this.props;
 
@@ -170,7 +167,6 @@ class AppLayout extends Component {
                   onInstallUpdate={installAppUpdate}
                 />
               )}
-              {isDelayAppScreenVisible && (<DelayApp />)}
               <BasicAuth />
               <ShareFranz />
               {services}

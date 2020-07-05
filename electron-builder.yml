@@ -10,13 +10,12 @@ mac:
   category: public.app-category.productivity
   icon: ./build-helpers/images/icon.icns
   darkModeSupport: true
-  hardenedRuntime: true
+  hardenedRuntime: false
   gatekeeperAssess: false
-  entitlements: build-helpers/default.entitlements.mac.plist
-  entitlementsInherit: build-helpers/default.entitlements.mac.plist
   extendInfo:
     NSCameraUsageDescription: "This app requires camera access for video chats"
     NSMicrophoneUsageDescription: "This app requires microphone access for voice chats"
+  identity: null
 
 dmg:
   background: ./build-helpers/images/dmgInstaller.tiff
@@ -56,5 +55,3 @@ asarUnpack:
   - ./dictionaries
   - ./node_modules/mac-screen-capture-permissions
   - ./assets/images/taskbar
-
-afterSign: build-helpers/notarize.js

@@ -21,7 +21,7 @@
     "manage-translations": "node ./src/i18n/manage-translations.js",
     "sign": "gulp sign",
     "prebuild": "gulp build",
-    "build": "npx electron-builder --publish onTag",
+    "build": "npx electron-builder",
     "rebuild": "npx electron-rebuild",
     "commit": "git-cz",
     "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s",
